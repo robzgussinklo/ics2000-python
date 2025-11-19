@@ -222,7 +222,9 @@ class DeviceType(enum.Enum):
     LAMP = 1
     DIMMER = 2
     OPEN_CLOSE = 3
+    ZIGBEE = 12
     DIMMABLE_LAMP = 24
+    KAKUSCHAKELAAR = 41
     ZIGBEE_TEMPERATURE_AND_HUMIDITY_SENSOR = 46
 
 
