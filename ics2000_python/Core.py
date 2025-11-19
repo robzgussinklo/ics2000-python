@@ -98,7 +98,9 @@ class Hub:
                         DeviceType.LAMP: Light,  # 1
                         DeviceType.DIMMER: Dimmer,  # 2
                         DeviceType.OPEN_CLOSE: Light,  # 3
+                        DeviceType.ZIGBEE: Light, # 12
                         DeviceType.DIMMABLE_LAMP: Dimmer,  # 24
+                        DeviceType.KAKUSCHAKELAAR: Light, # 41
                         DeviceType.ZIGBEE_TEMPERATURE_AND_HUMIDITY_SENSOR: TemperatureHumiditySensor  # 46
                     }[dev](name, entity_id, self)
                 )
