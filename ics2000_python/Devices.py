@@ -35,6 +35,18 @@ class Light(Device):
     def get_status(self) -> Optional[bool]:
         return self._hub.get_lamp_status(self._id)
 
+class ZigbeeSwitch(Device):
+    def turn_off(self):
+        cmd = self._hub.getcmdswitch(self._id, False)
+        self._hub.send_command(cmd.getcommand())
+
+    def turn_on(self):
+        cmd = self._hub.getcmdswitch(self._id, True)
+        self._hub.send_command(cmd.getcommand())
+
+    def get_status(self) -> Optional[bool]:
+        return self._hub.get_lamp_status(self._id)
+
 class Dimmer(Device):
 
     def dim(self, level):
