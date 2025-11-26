@@ -11,7 +11,7 @@ setuptools.setup(
     description="Trust ICS-2000 Python library",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/rdegraafwhizzkit/ics2000-python",
+    url="https://github.com/b.com/robzgussinklo/ics2000-python",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
