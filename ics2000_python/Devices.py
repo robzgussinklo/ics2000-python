@@ -45,7 +45,7 @@ class ZigbeeSwitch(Device):
         self._hub.send_command(cmd.getcommand())
 
     def get_status(self) -> Optional[bool]:
-        return self._hub.get_lamp_status(self._id)
+        return self._hub.get_zigbee_status(self._id)
 
 class Dimmer(Device):
 
