@@ -195,6 +195,12 @@ class Hub:
             return True if status[0] == 1 else False
         return False
 
+    def get_zigbee_status(self, entity) -> Optional[bool]:
+        status = self.get_device_status(entity)
+        if len(status) >= 1:
+            return True if status[3] == 1 else False
+        return False
+
     def get_temperature(self, entity):
         status = self.get_device_status(entity)
         if len(status) >= 1:
