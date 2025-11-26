@@ -37,11 +37,11 @@ class Light(Device):
 
 class ZigbeeSwitch(Device):
     def turn_on(self):
-        cmd = self._hub.simple_command(self._id, 3, 1)
+        cmd = self._hub.simple_command(self._id, 3, True)
         self._hub.send_command(cmd.getcommand())
 
     def turn_off(self):
-        cmd = self._hub.simple_command(self._id, 3, 0)
+        cmd = self._hub.simple_command(self._id, 3, False)
         self._hub.send_command(cmd.getcommand())
 
     def get_status(self) -> Optional[bool]:
