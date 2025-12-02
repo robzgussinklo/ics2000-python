@@ -64,7 +64,9 @@ class TemperatureHumiditySensor(Device):
     def get_humidity(self):
         cmd = self._hub.get_humidity(super()._hub)
         return super()._hub.send_command(cmd.getcommand())
+
 class Zigbee_Lamp:
+
     def __init__(self, name, entity_id, hb):
         self._hub = hb
         self._name = name
