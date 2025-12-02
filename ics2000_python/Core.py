@@ -8,7 +8,7 @@ import time
 
 from ics2000_python.Cryptographer import decrypt
 from ics2000_python.Command import Command
-from ics2000_python.Devices import Device, Light, Dimmer, Optional, ZigbeeSwitch, TemperatureHumiditySensor
+from ics2000_python.Devices import Device, Light, Dimmer, Optional, ZigbeeSwitch, TemperatureHumiditySensor, Zigbee_Lamp
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -98,9 +98,9 @@ class Hub:
                         DeviceType.LAMP: Light,  # 1
                         DeviceType.DIMMER: Dimmer,  # 2
                         DeviceType.OPEN_CLOSE: Light,  # 3
-                        DeviceType.ZIGBEE_SWITCH: ZigbeeSwitch, # 33
+                        DeviceType.ZIGBEE_SWITCH: Zigbee_Lamp, # 33
                         DeviceType.DIMMABLE_LAMP: Dimmer,  # 24
-                        DeviceType.KAKUSCHAKELAAR: ZigbeeSwitch, # 41
+                        DeviceType.KAKUSCHAKELAAR: Zigbee_Lamp, # 41
                         DeviceType.ZIGBEE_TEMPERATURE_AND_HUMIDITY_SENSOR: TemperatureHumiditySensor  # 46
                     }[dev](name, entity_id, self)
                 )
